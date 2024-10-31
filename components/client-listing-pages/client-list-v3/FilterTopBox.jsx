@@ -1,10 +1,8 @@
-
-
-'use client'
+"use client";
 
 import Link from "next/link";
 import Pagination from "../components/Pagination";
-import candidatesData from "../../../data/candidates";
+import candidatesData from "../../../data/clients";
 import { useDispatch, useSelector } from "react-redux";
 import {
   addCandidateGender,

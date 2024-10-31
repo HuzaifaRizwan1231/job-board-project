@@ -1,10 +1,8 @@
-
-
-'use client'
+"use client";
 
 import Link from "next/link";
 import ListingShowing from "../components/ListingShowing";
-import candidatesData from "../../../data/candidates";
+import candidatesData from "../../../data/clients";
 import { useDispatch, useSelector } from "react-redux";
 import {
   addCandidateGender,

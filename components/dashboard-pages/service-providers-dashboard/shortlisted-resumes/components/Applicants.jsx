@@ -1,5 +1,5 @@
 import Link from "next/link";
-import candidatesData from "../../../../../data/candidates";
+import candidatesData from "../../../../../data/clients";
 import Image from "next/image";
 
 const Applicants = () => {

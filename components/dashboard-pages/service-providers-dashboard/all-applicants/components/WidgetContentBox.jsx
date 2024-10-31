@@ -1,6 +1,6 @@
 "use client";
 
-import candidatesData from "../../../../../data/candidates";
+import candidatesData from "../../../../../data/clients";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import Link from "next/link";
 import Image from "next/image";

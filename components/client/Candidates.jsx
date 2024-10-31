@@ -1,11 +1,8 @@
-
-
-'use client'
-
+"use client";
 
 import Link from "next/link";
 import Slider from "react-slick";
-import candidates from "../../data/candidates";
+import candidates from "../../data/clients";
 import Image from "next/image";
 
 const Candidates = () => {
