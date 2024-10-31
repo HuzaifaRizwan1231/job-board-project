@@ -63,7 +63,7 @@ module.exports = [
         id: 4,
         name: "Clients Review",
         icon: "la-star-half-alt",
-        routePath: "/admin-dashboard/clients-review",
+        routePath: "/admin-dashboard/clients-reviews",
         active: "",
       },
     ],
