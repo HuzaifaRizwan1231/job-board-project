@@ -4,9 +4,9 @@ import LoginPopup from "../../../common/form/login/LoginPopup";
 import DashboardAdminSidebar from "../../../header/DashboardAdminSidebar";
 import BreadCrumb from "../../BreadCrumb";
 import CopyrightFooter from "../../CopyrightFooter";
-import JobListingsTable from "./components/JobListingsTable";
 import MenuToggler from "../../MenuToggler";
 import TopCardBlock from "../orders/components/TopCardBlock";
+import OrdersTable from "./components/OrdersTable";
 
 const index = () => {
   return (
@@ -43,7 +43,7 @@ const index = () => {
             <div className="col-lg-12">
               {/* <!-- Ls widget --> */}
               <div className="ls-widget">
-                <JobListingsTable />
+                <OrdersTable />
               </div>
             </div>
           </div>

@@ -1,5 +1,5 @@
 import dynamic from "next/dynamic";
-import candidates from "@/data/candidates";
+import candidates from "@/data/clients";
 import candidateResume from "@/data/candidateResume";
 import LoginPopup from "@/components/common/form/login/LoginPopup";
 import FooterDefault from "@/components/footer/common-footer";

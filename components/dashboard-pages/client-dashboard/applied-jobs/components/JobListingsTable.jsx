@@ -1,5 +1,5 @@
 import Link from "next/link.js";
-import jobs from "../../../../../data/orders.js/index.js";
+import jobs from "../../../../../data/orders.js";
 import Image from "next/image.js";
 
 const JobListingsTable = () => {

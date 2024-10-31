@@ -10,7 +10,7 @@ import { menuToggle } from "../../features/toggle/toggleSlice";
 import { usePathname } from "next/navigation";
 import adminMenuData from "@/data/adminMenuData";
 
-const DashboardCandidatesSidebar = () => {
+const DashboardAdminSidebar = () => {
   const { menu } = useSelector((state) => state.toggle);
   const percentage = 30;
 
@@ -31,28 +31,33 @@ const DashboardCandidatesSidebar = () => {
       {/* End sidebar close icon */}
 
       <div className="sidebar-inner">
-        <ul className="navigation">
-          {adminMenuData.map((item) => (
-            <>
-              <li
-                className={`${
-                  isActiveLink(item.routePath, usePathname()) ? "active" : ""
-                } mb-1`}
-                key={item.id}
-                onClick={menuToggleHandler}
-              >
-                <Link href={item.routePath}>
-                  <i className={`la ${item.icon}`}></i> {item.name}
-                </Link>
+        {adminMenuData.map((heading) => (
+          <div key={heading.id}>
+            <ul className="navigation">
+              <li className="text-uppercase mb-2 mt-3 fw-medium">
+                {heading.heading}
               </li>
-              {/* <div className="d-flex">
-                <div>---------</div>
-                MENU
-                <div>---------</div>
-              </div> */}
-            </>
-          ))}
-        </ul>
+              {heading.items.map((item) => (
+                <>
+                  <li
+                    className={`${
+                      isActiveLink(item.routePath, usePathname())
+                        ? "active"
+                        : ""
+                    } mb-1`}
+                    key={item.id}
+                    onClick={menuToggleHandler}
+                  >
+                    <Link href={item.routePath}>
+                      <i className={`la ${item.icon}`}></i> {item.name}
+                    </Link>
+                  </li>
+                </>
+              ))}
+            </ul>
+          </div>
+        ))}
+
         {/* End navigation */}
 
         <div className="skills-percentage">
@@ -82,4 +87,4 @@ const DashboardCandidatesSidebar = () => {
   );
 };
 
-export default DashboardCandidatesSidebar;
+export default DashboardAdminSidebar;

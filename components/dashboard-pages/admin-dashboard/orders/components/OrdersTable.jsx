@@ -2,11 +2,11 @@ import Link from "next/link.js";
 import jobs from "@/data/orders.js";
 import Image from "next/image.js";
 
-const JobListingsTable = () => {
+const OrdersTable = () => {
   return (
     <div className="tabs-box">
       <div className="widget-title">
-        <h4>My Applied Jobs</h4>
+        <h4>My Orders</h4>
 
         <div className="chosen-outer">
           {/* <!--Tabs Box--> */}
@@ -28,18 +28,21 @@ const JobListingsTable = () => {
             <table className="default-table manage-job-table">
               <thead>
                 <tr>
-                  <th>Job Title</th>
-                  <th>Date Applied</th>
+                  <th>Order No</th>
+                  <th>Plan Name</th>
+                  <th>Payment Mode</th>
+                  <th>Amount</th>
                   <th>Status</th>
-                  <th>Action</th>
+                  <th>Created At</th>
+                  <th>Actions</th>
                 </tr>
               </thead>
 
               <tbody>
                 {jobs.slice(0, 4).map((item) => (
                   <tr key={item.id}>
-                    <td>
-                      {/* <!-- Job Block --> */}
+                    {/* <td>
+                      {/* <!-- Job Block --> 
                       <div className="job-block">
                         <div className="inner-box">
                           <div className="content">
@@ -69,9 +72,13 @@ const JobListingsTable = () => {
                           </div>
                         </div>
                       </div>
-                    </td>
-                    <td>Dec 5, 2020</td>
+                    </td> */}
+                    <td>{item.orderNo}</td>
+                    <td>{item.planName}</td>
+                    <td>{item.paymentMode}</td>
+                    <td>{item.amount}</td>
                     <td className="status">Active</td>
+                    <td>Dec 5, 2020</td>
                     <td>
                       <div className="option-box">
                         <ul className="option-list">
@@ -100,4 +107,4 @@ const JobListingsTable = () => {
   );
 };
 
-export default JobListingsTable;
+export default OrdersTable;
