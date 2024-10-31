@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import companyData from "../../../data/topCompany";
+import companyData from "../../../data/serviceProviders";
 import Pagination from "../components/Pagination";
 import {
   addCategory,

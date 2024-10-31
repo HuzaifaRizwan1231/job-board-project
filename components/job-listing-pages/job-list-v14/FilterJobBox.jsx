@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import jobs from "../../../data/job-featured";
+import jobs from "../../../data/orders";
 import ListingShowing from "../components/ListingShowing";
 import { useDispatch, useSelector } from "react-redux";
 import {

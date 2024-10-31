@@ -1,5 +1,5 @@
 import Link from "next/link";
-import topCompany from "../../data/topCompany";
+import topCompany from "../../data/serviceProviders";
 import Image from "next/image";
 
 const TopCompany3 = () => {

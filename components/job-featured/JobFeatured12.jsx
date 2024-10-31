@@ -4,7 +4,7 @@
 
 import Link from "next/link";
 import Slider from "react-slick";
-import jobFeatured from "../../data/job-featured";
+import jobFeatured from "../../data/orders";
 import Image from "next/image";
 
 const JobFeatured12 = () => {

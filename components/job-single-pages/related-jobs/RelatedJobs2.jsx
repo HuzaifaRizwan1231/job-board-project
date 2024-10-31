@@ -1,5 +1,5 @@
 import Link from "next/link";
-import jobs from "../../../data/job-featured";
+import jobs from "../../../data/orders";
 import Image from "next/image";
 
 const RelatedJobs2 = () => {

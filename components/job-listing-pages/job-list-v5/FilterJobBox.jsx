@@ -3,7 +3,7 @@
 'use client'
 
 import Link from "next/link";
-import jobs from "../../../data/job-featured";
+import jobs from "../../../data/orders";
 import Pagination from "../components/Pagination";
 import JobSelect from "../components/JobSelect";
 import { useDispatch, useSelector } from "react-redux";
