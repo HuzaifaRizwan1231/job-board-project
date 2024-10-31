@@ -1,6 +1,10 @@
 module.exports = [
   {
     id: 1,
+    orderNo: "0000019",
+    planName: "Starter",
+    paymentMode: "stripe",
+    amount: "$10.00",
     logo: "/images/resource/company-logo/1-1.png",
     jobTitle: "Software Engineer (Android), Libraries",
     company: "Segment",
@@ -38,6 +42,10 @@ module.exports = [
   },
   {
     id: 2,
+    orderNo: "0000019",
+    planName: "Starter",
+    paymentMode: "stripe",
+    amount: "$10.00",
     logo: "/images/resource/company-logo/1-2.png",
     jobTitle: "Recruiting Coordinator",
     company: "Catalyst",
@@ -75,6 +83,10 @@ module.exports = [
   },
   {
     id: 3,
+    orderNo: "0000019",
+    planName: "Starter",
+    paymentMode: "stripe",
+    amount: "$10.00",
     logo: "/images/resource/company-logo/1-3.png",
     jobTitle: "Product Manager, Studio",
     company: "Invision",
@@ -108,6 +120,10 @@ module.exports = [
   },
   {
     id: 4,
+    orderNo: "0000019",
+    planName: "Starter",
+    paymentMode: "stripe",
+    amount: "$10.00",
     logo: "/images/resource/company-logo/1-4.png",
     jobTitle: "Senior Product Designer",
     company: "Upwork",
