@@ -2,11 +2,11 @@ import MobileMenu from "../../../header/MobileMenu";
 import DashboardCandidatesHeader from "../../../header/DashboardCandidatesHeader";
 import LoginPopup from "../../../common/form/login/LoginPopup";
 import DashboardAdminSidebar from "../../../header/DashboardAdminSidebar";
-import BreadCrumb from "../../BreadCrumb";
 import CopyrightFooter from "../../CopyrightFooter";
 import MenuToggler from "../../MenuToggler";
 import TopCardBlock from "./components/TopCardBlock";
 import PartnersTable from "./components/PartnersTable";
+import BreadCrumbWithButton from "../../BreadCrumbWithButton";
 
 const index = () => {
   return (
@@ -29,7 +29,12 @@ const index = () => {
       {/* <!-- Dashboard --> */}
       <section className="user-dashboard">
         <div className="dashboard-outer">
-          <BreadCrumb title="Partners" />
+          <BreadCrumbWithButton
+            title="Partners"
+            buttonText="Create a Partner"
+            icon="las la-plus"
+          />
+
           {/* breadCrumb */}
 
           <MenuToggler />
