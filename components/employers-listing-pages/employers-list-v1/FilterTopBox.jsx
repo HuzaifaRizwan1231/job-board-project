@@ -1,10 +1,8 @@
-
-
-'use client'
+"use client";
 
 import Link from "next/link";
 import ListingShowing from "../components/ListingShowing";
-import companyData from "../../../data/topCompany";
+import companyData from "../../../data/serviceProviders";
 import { useDispatch, useSelector } from "react-redux";
 import {
   addCategory,

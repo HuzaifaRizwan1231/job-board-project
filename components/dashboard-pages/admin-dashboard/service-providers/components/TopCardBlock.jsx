@@ -2,31 +2,31 @@ const TopCardBlock = () => {
   const cardContent = [
     {
       id: 1,
-      icon: "la la-list",
-      countNumber: "22",
+      icon: "la-list",
+      countNumber: "189",
       metaName: "Total",
       uiClass: "ui-blue",
     },
     {
       id: 2,
-      icon: "las la-clock",
-      countNumber: "9382",
-      metaName: "Pending",
-      uiClass: "ui-yellow",
-    },
-    {
-      id: 3,
-      icon: "las la-check",
-      countNumber: "74",
-      metaName: "Completed",
+      icon: "la-shield",
+      countNumber: "189",
+      metaName: "Active",
       uiClass: "ui-green",
     },
     {
-      id: 4,
-      icon: "las la-times-circle",
-      countNumber: "32",
-      metaName: "Declined",
+      id: 3,
+      icon: "la-times-circle-o",
+      countNumber: "0",
+      metaName: "Inactive",
       uiClass: "ui-red",
+    },
+    {
+      id: 4,
+      icon: "la-user-shield",
+      countNumber: "164",
+      metaName: "Verified",
+      uiClass: "ui-yellow",
     },
   ];
 
@@ -39,7 +39,7 @@ const TopCardBlock = () => {
         >
           <div className={`ui-item ${item.uiClass}`}>
             <div className="left">
-              <i className={`icon ${item.icon}`}></i>
+              <i className={`icon la ${item.icon}`}></i>
             </div>
             <div className="right">
               <h4>0</h4>

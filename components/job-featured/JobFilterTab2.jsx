@@ -1,8 +1,7 @@
-
-'use client'
+"use client";
 
 import Link from "next/link";
-import jobFeatured from "../../data/job-featured";
+import jobFeatured from "../../data/orders";
 import { useState } from "react";
 import Image from "next/image";
 

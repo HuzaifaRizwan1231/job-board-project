@@ -1,8 +1,6 @@
+"use client";
 
-
-'use client'
-
-import topCompany from "../../data/topCompany";
+import topCompany from "../../data/serviceProviders";
 import Slider from "react-slick";
 import Link from "next/link";
 import Image from "next/image";
