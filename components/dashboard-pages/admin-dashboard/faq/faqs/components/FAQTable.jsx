@@ -1,10 +1,23 @@
-import React from "react";
-import data from "@/data/language";
+import Link from "next/link.js";
+import Image from "next/image.js";
 
-export default function LanguageTable() {
+const FAQTable = () => {
+  const faqs = [
+    {
+      id: 1,
+      question: "What is a question?",
+      answer: "I do not know",
+      category: "Buying",
+      language: "en",
+    },
+  ];
   return (
     <div className="tabs-box">
-      <div className="widget-title"></div>
+      <div className="widget-title">
+        <h4>FAQs</h4>
+      </div>
+      {/* End filter top bar */}
+
       {/* Start table widget content */}
       <div className="widget-content">
         <div className="table-outer">
@@ -12,33 +25,31 @@ export default function LanguageTable() {
             <table className="default-table manage-job-table">
               <thead>
                 <tr>
-                  <th>Language Name</th>
-                  <th>Language key</th>
-                  <th />
-                  <th />
-                  <th />
-                  <th>Action</th>
+                  <th>Question</th>
+                  <th>Answer</th>
+                  <th>Category</th>
+                  <th>Language</th>
+                  <th>Actions</th>
                 </tr>
               </thead>
 
               <tbody>
-                {data.slice(0, 4).map((item) => (
+                {faqs.slice(0, 4).map((item) => (
                   <tr key={item.id}>
-                    <td>{item.name}</td>
-                    <td>{item.key}</td>
-                    <td />
-                    <td />
-                    <td />
+                    <td>{item.question}</td>
+                    <td>{item.answer}</td>
+                    <td>{item.category}</td>
+                    <td>{item.language}</td>
                     <td>
                       <div className="option-box">
                         <ul className="option-list">
                           <li>
-                            <button data-text="Edit Language">
+                            <button data-text="Edit">
                               <span className="la la-edit"></span>
                             </button>
                           </li>
                           <li>
-                            <button data-text="Delete Language">
+                            <button data-text="Delete">
                               <span className="la la-trash"></span>
                             </button>
                           </li>
@@ -55,4 +66,6 @@ export default function LanguageTable() {
       {/* End table widget content */}
     </div>
   );
-}
+};
+
+export default FAQTable;

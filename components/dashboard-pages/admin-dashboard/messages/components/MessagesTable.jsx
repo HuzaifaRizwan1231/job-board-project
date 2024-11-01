@@ -1,12 +1,20 @@
 import Link from "next/link.js";
-import data from "@/data/paymentGateway.js";
 import Image from "next/image.js";
 
-const PaymentGatewayTable = () => {
+const MessagesTable = () => {
+  const messages = [
+    {
+      id: 1,
+      serviceProviderName: "Payoneer",
+      serviceProviderAvatar: "/images/resource/company-1.png",
+      clientName: "Shani Milar",
+      replies: 24,
+    },
+  ];
   return (
     <div className="tabs-box">
       <div className="widget-title">
-        <h4>Gateways</h4>
+        <h4>Messages</h4>
 
         <div className="chosen-outer">
           {/* <!--Tabs Box--> */}
@@ -28,17 +36,16 @@ const PaymentGatewayTable = () => {
             <table className="default-table manage-job-table">
               <thead>
                 <tr>
-                  <th>Name</th>
-                  <th>Charge</th>
-                  <th>Currency</th>
-                  <th>Gateway Status</th>
-                  <th>Payment Mode</th>
-                  <th>Action</th>
+                  <th>Service Provider</th>
+                  <th>Client</th>
+                  <th>Created At</th>
+                  <th>Replies</th>
+                  <th>Actions</th>
                 </tr>
               </thead>
 
               <tbody>
-                {data.slice(0, 4).map((item) => (
+                {messages.slice(0, 4).map((item) => (
                   <tr key={item.id}>
                     <td>
                       {/* <!-- Job Block --> */}
@@ -49,35 +56,33 @@ const PaymentGatewayTable = () => {
                               <Image
                                 width={50}
                                 height={49}
-                                src={item.logo}
+                                src={item.serviceProviderAvatar}
                                 alt="logo"
                               />
                             </span>
                             <h4>
                               <Link href={`/job-single-v3/${item.id}`}>
-                                {item.name}
+                                {item.serviceProviderName}
                               </Link>
                             </h4>
-                            <strong
-                              style={{ fontSize: 12 }}
-                              className="text-nowrap"
-                            >
-                              Limit : 1.00 - 5,000.00
-                            </strong>
                           </div>
                         </div>
                       </div>
                     </td>
-                    <td>{item.charge}</td>
-                    <td>{item.currency}</td>
-                    <td className="status">{item.status}</td>
-                    <td>{item.mode}</td>
+                    <td>{item.clientName}</td>
+                    <td>29 Dec, 2023</td>
+                    <td>{item.replies}</td>
                     <td>
                       <div className="option-box">
                         <ul className="option-list">
                           <li>
-                            <button data-text="Edit Aplication">
-                              <span className="la la-edit"></span>
+                            <button data-text="View">
+                              <span className="la la-external-link-alt"></span>
+                            </button>
+                          </li>
+                          <li>
+                            <button data-text="Delete">
+                              <span className="la la-trash"></span>
                             </button>
                           </li>
                         </ul>
@@ -95,4 +100,4 @@ const PaymentGatewayTable = () => {
   );
 };
 
-export default PaymentGatewayTable;
+export default MessagesTable;
