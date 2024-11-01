@@ -1,12 +1,12 @@
 import Link from "next/link.js";
-import jobs from "@/data/orders.js";
+import clients from "@/data/clients.js";
 import Image from "next/image.js";
 
-const OrdersTable = () => {
+const ClientsTable = () => {
   return (
     <div className="tabs-box">
       <div className="widget-title">
-        <h4>My Orders</h4>
+        <h4>My Applied Jobs</h4>
 
         <div className="chosen-outer">
           {/* <!--Tabs Box--> */}
@@ -28,21 +28,19 @@ const OrdersTable = () => {
             <table className="default-table manage-job-table">
               <thead>
                 <tr>
-                  <th>Order No</th>
-                  <th>Plan Name</th>
-                  <th>Payment Mode</th>
-                  <th>Amount</th>
+                  <th>Candidate</th>
+                  <th>Designation</th>
                   <th>Status</th>
                   <th>Created At</th>
-                  <th>Actions</th>
+                  <th>Action</th>
                 </tr>
               </thead>
 
               <tbody>
-                {jobs.slice(0, 4).map((item) => (
+                {clients.slice(0, 4).map((item) => (
                   <tr key={item.id}>
-                    {/* <td>
-                      {/* <!-- Job Block --> 
+                    <td>
+                      {/* <!-- Job Block --> */}
                       <div className="job-block">
                         <div className="inner-box">
                           <div className="content">
@@ -50,33 +48,31 @@ const OrdersTable = () => {
                               <Image
                                 width={50}
                                 height={49}
-                                src={item.logo}
-                                alt="logo"
+                                src={item.avatar}
+                                alt="avatar"
+                                className="rounded-circle"
                               />
                             </span>
                             <h4>
                               <Link href={`/job-single-v3/${item.id}`}>
-                                {item.jobTitle}
+                                {item.name}
                               </Link>
                             </h4>
                             <ul className="job-info">
                               <li>
                                 <span className="icon flaticon-briefcase"></span>
-                                Segment
+                                {item.experience}
                               </li>
                               <li>
                                 <span className="icon flaticon-map-locator"></span>
-                                London, UK
+                                {item.location}
                               </li>
                             </ul>
                           </div>
                         </div>
                       </div>
-                    </td> */}
-                    <td>{item.orderNo}</td>
-                    <td>{item.planName}</td>
-                    <td>{item.paymentMode}</td>
-                    <td>{item.amount}</td>
+                    </td>
+                    <td>{item.designation}</td>
                     <td className="status">Active</td>
                     <td>Dec 5, 2020</td>
                     <td>
@@ -85,6 +81,11 @@ const OrdersTable = () => {
                           <li>
                             <button data-text="View Aplication">
                               <span className="la la-eye"></span>
+                            </button>
+                          </li>
+                          <li>
+                            <button data-text="Edit Aplication">
+                              <span className="la la-edit"></span>
                             </button>
                           </li>
                           <li>
@@ -107,4 +108,4 @@ const OrdersTable = () => {
   );
 };
 
-export default OrdersTable;
+export default ClientsTable;

@@ -1,12 +1,12 @@
 import Link from "next/link.js";
-import jobs from "@/data/orders.js";
+import data from "@/data/paymentGateway.js";
 import Image from "next/image.js";
 
-const OrdersTable = () => {
+const PaymentGatewayTable = () => {
   return (
     <div className="tabs-box">
       <div className="widget-title">
-        <h4>My Orders</h4>
+        <h4>My Applied Jobs</h4>
 
         <div className="chosen-outer">
           {/* <!--Tabs Box--> */}
@@ -28,21 +28,20 @@ const OrdersTable = () => {
             <table className="default-table manage-job-table">
               <thead>
                 <tr>
-                  <th>Order No</th>
-                  <th>Plan Name</th>
+                  <th>Name</th>
+                  <th>Charge</th>
+                  <th>Currency</th>
+                  <th>Gateway Status</th>
                   <th>Payment Mode</th>
-                  <th>Amount</th>
-                  <th>Status</th>
-                  <th>Created At</th>
-                  <th>Actions</th>
+                  <th>Action</th>
                 </tr>
               </thead>
 
               <tbody>
-                {jobs.slice(0, 4).map((item) => (
+                {data.slice(0, 4).map((item) => (
                   <tr key={item.id}>
-                    {/* <td>
-                      {/* <!-- Job Block --> 
+                    <td>
+                      {/* <!-- Job Block --> */}
                       <div className="job-block">
                         <div className="inner-box">
                           <div className="content">
@@ -56,40 +55,29 @@ const OrdersTable = () => {
                             </span>
                             <h4>
                               <Link href={`/job-single-v3/${item.id}`}>
-                                {item.jobTitle}
+                                {item.name}
                               </Link>
                             </h4>
-                            <ul className="job-info">
-                              <li>
-                                <span className="icon flaticon-briefcase"></span>
-                                Segment
-                              </li>
-                              <li>
-                                <span className="icon flaticon-map-locator"></span>
-                                London, UK
-                              </li>
-                            </ul>
+                            <strong
+                              style={{ fontSize: 12 }}
+                              className="text-nowrap"
+                            >
+                              Limit : 1.00 - 5,000.00
+                            </strong>
                           </div>
                         </div>
                       </div>
-                    </td> */}
-                    <td>{item.orderNo}</td>
-                    <td>{item.planName}</td>
-                    <td>{item.paymentMode}</td>
-                    <td>{item.amount}</td>
-                    <td className="status">Active</td>
-                    <td>Dec 5, 2020</td>
+                    </td>
+                    <td>{item.charge}</td>
+                    <td>{item.currency}</td>
+                    <td className="status">{item.status}</td>
+                    <td>{item.mode}</td>
                     <td>
                       <div className="option-box">
                         <ul className="option-list">
                           <li>
-                            <button data-text="View Aplication">
-                              <span className="la la-eye"></span>
-                            </button>
-                          </li>
-                          <li>
-                            <button data-text="Delete Aplication">
-                              <span className="la la-trash"></span>
+                            <button data-text="Edit Aplication">
+                              <span className="la la-edit"></span>
                             </button>
                           </li>
                         </ul>
@@ -107,4 +95,4 @@ const OrdersTable = () => {
   );
 };
 
-export default OrdersTable;
+export default PaymentGatewayTable;
