@@ -18,6 +18,7 @@ export default function TestimonialTable() {
                   <th>Comment</th>
                   <th>Ratings</th>
                   <th>Brand Avatar</th>
+                  <th>is Active</th>
                   <th>Action</th>
                 </tr>
               </thead>
@@ -70,17 +71,24 @@ export default function TestimonialTable() {
                       <div className="option-box">
                         <ul className="option-list">
                           <li>
-                            <button data-text="View Aplication">
-                              <span className="la la-eye"></span>
+                            <button data-text="Check">
+                              <span className="las la-check-square"></span>
                             </button>
                           </li>
+                        </ul>
+                      </div>
+                    </td>
+
+                    <td>
+                      <div className="option-box">
+                        <ul className="option-list">
                           <li>
-                            <button data-text="Edit Aplication">
+                            <button data-text="Edit">
                               <span className="la la-edit"></span>
                             </button>
                           </li>
                           <li>
-                            <button data-text="Delete Aplication">
+                            <button data-text="Delete">
                               <span className="la la-trash"></span>
                             </button>
                           </li>

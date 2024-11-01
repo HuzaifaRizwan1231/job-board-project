@@ -7,5 +7,7 @@ module.exports = [
     status: "Open",
     createdAt: "3 Jan 2024",
     user: "Darlene Robertson",
+    priority: "High",
+    assignedTo: "John Smith",
   },
 ];

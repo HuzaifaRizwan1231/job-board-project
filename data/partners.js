@@ -4,5 +4,6 @@ module.exports = [
     image: "/images/resource/company-1.png",
     url: "#",
     type: "Partner",
+    topClient: "Udemy",
   },
 ];

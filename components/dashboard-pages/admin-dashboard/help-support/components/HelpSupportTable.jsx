@@ -33,7 +33,9 @@ const HelpSupportTable = () => {
                   <th>Converstations</th>
                   <th>Status</th>
                   <th>User</th>
+                  <th>Priority</th>
                   <th>Created At</th>
+                  <th>Assigned to</th>
                   <th>Ticket</th>
                 </tr>
               </thead>
@@ -78,7 +80,9 @@ const HelpSupportTable = () => {
                     <td>{item.conversations}</td>
                     <td className="status">{item.status}</td>
                     <td>{item.user}</td>
+                    <td>{item.priority}</td>
                     <td>{item.createdAt}</td>
+                    <td>{item.assignedTo}</td>
                     <td>
                       <div className="option-box">
                         <ul className="option-list">
