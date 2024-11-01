@@ -1,6 +1,7 @@
 const CustomPagesTable = () => {
   return (
     <div className="tabs-box">
+      <div className="widget-title"></div>
       {/* Start table widget content */}
       <div className="widget-content">
         <div className="table-outer">

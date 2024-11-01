@@ -1,12 +1,12 @@
 import Link from "next/link.js";
-import data from "@/data/paymentGateway.js";
 import Image from "next/image.js";
+import projects from "@/data/projects";
 
-const PaymentGatewayTable = () => {
+const ProjectsTable = () => {
   return (
     <div className="tabs-box">
       <div className="widget-title">
-        <h4>Gateways</h4>
+        <h4>Projects</h4>
 
         <div className="chosen-outer">
           {/* <!--Tabs Box--> */}
@@ -29,17 +29,18 @@ const PaymentGatewayTable = () => {
               <thead>
                 <tr>
                   <th>Name</th>
-                  <th>Charge</th>
-                  <th>Currency</th>
-                  <th>Gateway Status</th>
-                  <th>Payment Mode</th>
-                  <th>Action</th>
+                  <th>Service Provider</th>
+                  <th>Service</th>
+                  <th>Category</th>
+                  <th>Created At</th>
+                  <th>Status</th>
                 </tr>
               </thead>
 
               <tbody>
-                {data.slice(0, 4).map((item) => (
+                {projects.slice(0, 4).map((item) => (
                   <tr key={item.id}>
+                    <td>{item.name}</td>
                     <td>
                       {/* <!-- Job Block --> */}
                       <div className="job-block">
@@ -49,40 +50,23 @@ const PaymentGatewayTable = () => {
                               <Image
                                 width={50}
                                 height={49}
-                                src={item.logo}
+                                src={item.img}
                                 alt="logo"
                               />
                             </span>
                             <h4>
                               <Link href={`/job-single-v3/${item.id}`}>
-                                {item.name}
+                                {item.serviceProviderName}
                               </Link>
                             </h4>
-                            <strong
-                              style={{ fontSize: 12 }}
-                              className="text-nowrap"
-                            >
-                              Limit : 1.00 - 5,000.00
-                            </strong>
                           </div>
                         </div>
                       </div>
                     </td>
-                    <td>{item.charge}</td>
-                    <td>{item.currency}</td>
-                    <td className="status">{item.status}</td>
-                    <td>{item.mode}</td>
-                    <td>
-                      <div className="option-box">
-                        <ul className="option-list">
-                          <li>
-                            <button data-text="Edit Aplication">
-                              <span className="la la-edit"></span>
-                            </button>
-                          </li>
-                        </ul>
-                      </div>
-                    </td>
+                    <td>{item.service}</td>
+                    <td>{item.category}</td>
+                    <td>Dec 5, 2020</td>
+                    <td className="status">Active</td>
                   </tr>
                 ))}
               </tbody>
@@ -95,4 +79,4 @@ const PaymentGatewayTable = () => {
   );
 };
 
-export default PaymentGatewayTable;
+export default ProjectsTable;

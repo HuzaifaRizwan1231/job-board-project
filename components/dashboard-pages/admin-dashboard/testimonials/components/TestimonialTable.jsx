@@ -6,6 +6,7 @@ import Link from "next/link";
 export default function TestimonialTable() {
   return (
     <div className="tabs-box">
+      <div className="widget-title"></div>
       {/* Start table widget content */}
       <div className="widget-content">
         <div className="table-outer">

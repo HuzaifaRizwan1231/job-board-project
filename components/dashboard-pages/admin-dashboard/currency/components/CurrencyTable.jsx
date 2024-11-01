@@ -4,6 +4,7 @@ import data from "@/data/currency";
 export default function CurrencyTable() {
   return (
     <div className="tabs-box">
+      <div className="widget-title"></div>
       {/* Start table widget content */}
       <div className="widget-content">
         <div className="table-outer">
