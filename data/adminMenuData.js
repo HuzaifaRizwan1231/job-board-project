@@ -236,7 +236,7 @@ module.exports = [
           {
             id: 18,
             name: "Blog",
-            routePath: "/admin-dashboard/blogs/blog",
+            routePath: "/admin-dashboard/blogs/",
             active: "",
           },
           {
