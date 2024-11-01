@@ -6,7 +6,7 @@ const ClientsTable = () => {
   return (
     <div className="tabs-box">
       <div className="widget-title">
-        <h4>My Applied Jobs</h4>
+        <h4>Clients</h4>
 
         <div className="chosen-outer">
           {/* <!--Tabs Box--> */}
@@ -28,10 +28,10 @@ const ClientsTable = () => {
             <table className="default-table manage-job-table">
               <thead>
                 <tr>
-                  <th>Candidate</th>
-                  <th>Designation</th>
+                  <th>Client</th>
+                  <th>is Verified</th>
                   <th>Status</th>
-                  <th>Created At</th>
+                  <th>Joined At</th>
                   <th>Action</th>
                 </tr>
               </thead>
@@ -60,10 +60,6 @@ const ClientsTable = () => {
                             </h4>
                             <ul className="job-info">
                               <li>
-                                <span className="icon flaticon-briefcase"></span>
-                                {item.experience}
-                              </li>
-                              <li>
                                 <span className="icon flaticon-map-locator"></span>
                                 {item.location}
                               </li>
@@ -72,7 +68,7 @@ const ClientsTable = () => {
                         </div>
                       </div>
                     </td>
-                    <td>{item.designation}</td>
+                    <td className="status">Verified</td>
                     <td className="status">Active</td>
                     <td>Dec 5, 2020</td>
                     <td>

@@ -31,6 +31,7 @@ const PartnersTable = () => {
                   <th>Image</th>
                   <th>Url</th>
                   <th>Type</th>
+                  <th>Top Client</th>
                   <th>Status</th>
                   <th>Created At</th>
                   <th>Actions</th>
@@ -59,6 +60,7 @@ const PartnersTable = () => {
                     </td>
                     <td>{item.url}</td>
                     <td>{item.type}</td>
+                    <td>{item.topClient}</td>
                     <td className="status">Active</td>
                     <td>22 Jan 2024</td>
                     <td>
